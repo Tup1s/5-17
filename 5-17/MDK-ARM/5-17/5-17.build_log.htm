@@ -1,0 +1,461 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.14.0.0
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Tupls 67, HP Inc., LIC=21E4T-RZZYE-2ZUW4-F7X8R-80HQ1-S2NP4
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.14.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 1 (build 106)
+Assembler:       Armasm.exe V5.05 update 1 (build 106)
+Linker/Locator:  ArmLink.exe V5.05 update 1 (build 106)
+Library Manager: ArmAr.exe V5.05 update 1 (build 106)
+Hex Converter:   FromElf.exe V5.05 update 1 (build 106)
+CPU DLL:         SARMCM3.DLL V5.14.0.0
+Dialog DLL:      DCM.DLL V1.13.1.0
+Target DLL:      CMSIS_AGDI.dll V1.21.0.0
+Dialog DLL:      TCM.DLL V1.14.4.0
+ 
+<h2>Project:</h2>
+C:\Users\33586\Desktop\5-17\5-17\MDK-ARM\5-17.uvprojx
+Project File Date:  05/24/2025
+
+<h2>Output:</h2>
+Rebuild target '5-17'
+assembling startup_stm32h723xx.s...
+compiling main.c...
+../User/Inc/show.h(17): warning:  #1-D: last line of file ends without a newline
+  #endif 
+../User/Inc/control.h(6): warning:  #1295-D: Deprecated declaration TIM_Init - give arg types
+  void TIM_Init();
+../User/Inc/control.h(15): warning:  #1295-D: Deprecated declaration Stop - give arg types
+  void Stop();
+../User/Inc/control.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+../User/Inc/usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+../User/Inc/usart.h(5): warning:  #1295-D: Deprecated declaration USART_Init - give arg types
+  void USART_Init();
+../User/Inc/usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+../User/Inc/servo.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif
+../User/Inc/hardware.h(9): warning:  #1295-D: Deprecated declaration LED_ON - give arg types
+  void LED_ON();
+../User/Inc/hardware.h(10): warning:  #1295-D: Deprecated declaration LED_OFF - give arg types
+  void LED_OFF();
+../User/Inc/hardware.h(11): warning:  #1295-D: Deprecated declaration LED_TOGGLE - give arg types
+  void LED_TOGGLE();
+../User/Inc/hardware.h(13): warning:  #1295-D: Deprecated declaration BUZZER_ON - give arg types
+  void BUZZER_ON();
+../User/Inc/hardware.h(14): warning:  #1295-D: Deprecated declaration BUZZER_OFF - give arg types
+  void BUZZER_OFF();
+../User/Inc/hardware.h(15): warning:  #1295-D: Deprecated declaration LASER_ON - give arg types
+  void LASER_ON();
+../User/Inc/hardware.h(16): warning:  #1295-D: Deprecated declaration LASER_OFF - give arg types
+  void LASER_OFF();
+../User/Inc/hardware.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif
+../Core/Src/main.c(134): warning:  #223-D: function "SPI_LCD_Init" declared implicitly
+    SPI_LCD_Init();     
+../Core/Src/main.c: 17 warnings, 0 errors
+compiling gpio.c...
+compiling dma.c...
+compiling i2c.c...
+compiling memorymap.c...
+compiling spi.c...
+../Core/Src/spi.c(157): error:  #20: identifier "LCD_Backlight_PIN" is undefined
+                GPIO_InitStruct.Pin             = LCD_Backlight_PIN;                            // 背光 引脚
+../Core/Src/spi.c(161): error:  #20: identifier "LCD_Backlight_PORT" is undefined
+                HAL_GPIO_Init(LCD_Backlight_PORT, &GPIO_InitStruct);    // 初始化  
+../Core/Src/spi.c(164): error:  #20: identifier "LCD_DC_PIN" is undefined
+                GPIO_InitStruct.Pin             = LCD_DC_PIN;                                 // 数据指令选择 引脚
+../Core/Src/spi.c(168): error:  #20: identifier "LCD_DC_PORT" is undefined
+                HAL_GPIO_Init(LCD_DC_PORT, &GPIO_InitStruct);         // 初始化  
+../Core/Src/spi.c(216): error:  #20: identifier "LCD_DC_Command" is undefined
+     LCD_DC_Command;     // 数据指令选择 引脚输出低电平，代表本次传输 指令
+../Core/Src/spi.c(232): error:  #20: identifier "LCD_DC_Data" is undefined
+     LCD_DC_Data;     // 数据指令选择 引脚输出高电平，代表本次传输 数据
+../Core/Src/spi.c(249): error:  #20: identifier "LCD_DC_Data" is undefined
+     LCD_DC_Data;      // 数据指令选择 引脚输出高电平，代表本次传输 数据
+../Core/Src/spi.c(268): error:  #20: identifier "LCD_DC_Data" is undefined
+        LCD_DC_Data;     // 数据指令选择 引脚输出高电平，代表本次传输 数据      
+../Core/Src/spi.c(374): warning:  #223-D: function "LCD_SetDirection" declared implicitly
+     LCD_SetDirection(Direction_V);           //        设置显示方向
+../Core/Src/spi.c(375): warning:  #223-D: function "LCD_SetBackColor" declared implicitly
+        LCD_SetBackColor(LCD_BLACK);           // 设置背景色
+../Core/Src/spi.c(376): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LCD_WHITE);               // 设置画笔色  
+../Core/Src/spi.c(377): warning:  #223-D: function "LCD_Clear" declared implicitly
+        LCD_Clear();                           // 清屏
+../Core/Src/spi.c(379): warning:  #223-D: function "LCD_SetAsciiFont" declared implicitly
+     LCD_SetAsciiFont(&ASCII_Font24);       // 设置默认字体
+../Core/Src/spi.c(380): warning:  #223-D: function "LCD_ShowNumMode" declared implicitly
+     LCD_ShowNumMode(Fill_Zero);                // 设置变量显示模式，多余位填充空格还是填充0
+../Core/Src/spi.c(383): error:  #20: identifier "LCD_Backlight_ON" is undefined
+     LCD_Backlight_ON;  // 引脚输出高电平点亮背光
+../Core/Src/spi.c(420): error:  #159: declaration is incompatible with previous "LCD_SetColor" (declared at line 376)
+  void LCD_SetColor(uint32_t Color)
+../Core/Src/spi.c(443): error:  #159: declaration is incompatible with previous "LCD_SetBackColor" (declared at line 375)
+  void LCD_SetBackColor(uint32_t Color)
+../Core/Src/spi.c(466): error:  #159: declaration is incompatible with previous "LCD_SetDirection" (declared at line 374)
+  void LCD_SetDirection(uint8_t direction)
+../Core/Src/spi.c(520): error:  #159: declaration is incompatible with previous "LCD_SetAsciiFont" (declared at line 379)
+  void LCD_SetAsciiFont(pFONT *Asciifonts)
+../Core/Src/spi.c(534): error:  #159: declaration is incompatible with previous "LCD_Clear" (declared at line 377)
+  void LCD_Clear(void)
+../Core/Src/spi.c(538): error:  #20: identifier "LCD_DC_Data" is undefined
+        LCD_DC_Data;     // 数据指令选择 引脚输出高电平，代表本次传输 数据      
+../Core/Src/spi.c(570): error:  #20: identifier "LCD_DC_Data" is undefined
+        LCD_DC_Data;     // 数据指令选择 引脚输出高电平，代表本次传输 数据      
+../Core/Src/spi.c(819): error:  #159: declaration is incompatible with previous "LCD_ShowNumMode" (declared at line 380)
+  void LCD_ShowNumMode(uint8_t mode)
+../Core/Src/spi.c(1238): error:  #20: identifier "LCD_DC_Data" is undefined
+        LCD_DC_Data;     // 数据指令选择 引脚输出高电平，代表本次传输 数据      
+../Core/Src/spi.c(1345): error:  #20: identifier "LCD_DC_Data" is undefined
+        LCD_DC_Data;     // 数据指令选择 引脚输出高电平，代表本次传输 数据      
+../Core/Src/spi.c(1384): warning:  #223-D: function "DrawCircleHelper" declared implicitly
+      DrawCircleHelper(x + r, y + r, r, 1);                 // 左上角
+../Core/Src/spi.c(1409): warning:  #223-D: function "DrawFillCircleHelper" declared implicitly
+      DrawFillCircleHelper(x + w - r - 1, y + r, r, 1, h - 2 * r - 1); // 右上角
+../Core/Src/spi.c(1426): error:  #159: declaration is incompatible with previous "DrawCircleHelper" (declared at line 1384)
+  void DrawCircleHelper(int x0, int y0, unsigned char r, unsigned char cornername)
+../Core/Src/spi.c(1483): error:  #159: declaration is incompatible with previous "DrawFillCircleHelper" (declared at line 1409)
+  void DrawFillCircleHelper(int x0, int y0, unsigned char r, unsigned char cornername, int delta)
+../Core/Src/spi.c(1745): warning:  #223-D: function "GetXY" declared implicitly
+      temp = GetXY();
+../Core/Src/spi.c(1745): error:  #513: a value of type "int" cannot be assigned to an entity of type "TypeXY"
+      temp = GetXY();
+../Core/Src/spi.c(1746): warning:  #223-D: function "SetRotateCenter" declared implicitly
+      SetRotateCenter(x, y);
+../Core/Src/spi.c(1747): warning:  #223-D: function "SetAngleDir" declared implicitly
+      SetAngleDir(0);
+../Core/Src/spi.c(1752): warning:  #223-D: function "SetAngle" declared implicitly
+      SetAngle(0);
+../Core/Src/spi.c(1753): warning:  #223-D: function "GetRotateXY" declared implicitly
+      m = GetRotateXY(x, y + r);
+../Core/Src/spi.c(1753): error:  #513: a value of type "int" cannot be assigned to an entity of type "TypeXY"
+      m = GetRotateXY(x, y + r);
+../Core/Src/spi.c(1754): warning:  #223-D: function "MoveTo" declared implicitly
+      MoveTo(m.x, m.y);
+../Core/Src/spi.c(1759): error:  #513: a value of type "int" cannot be assigned to an entity of type "TypeXY"
+          m = GetRotateXY(x, y + r);
+../Core/Src/spi.c(1760): warning:  #223-D: function "LineTo" declared implicitly
+          LineTo(m.x, m.y);
+../Core/Src/spi.c(1772): error:  #159: declaration is incompatible with previous "GetXY" (declared at line 1745)
+  TypeXY GetXY(void)
+../Core/Src/spi.c(1788): error:  #159: declaration is incompatible with previous "SetRotateCenter" (declared at line 1746)
+  void SetRotateCenter(int x0, int y0)
+../Core/Src/spi.c(1801): error:  #159: declaration is incompatible with previous "SetAngleDir" (declared at line 1747)
+  void SetAngleDir(int direction)
+../Core/Src/spi.c(1814): error:  #159: declaration is incompatible with previous "SetAngle" (declared at line 1752)
+  void SetAngle(float angle)
+../Core/Src/spi.c(1816): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      _RoateValue.angle = RADIAN(angle);
+../Core/Src/spi.c(1835): warning:  #223-D: function "mySqrt" declared implicitly
+      double r = mySqrt(temp);
+../Core/Src/spi.c(1858): error:  #159: declaration is incompatible with previous "mySqrt" (declared at line 1835)
+  float mySqrt(float x)
+../Core/Src/spi.c(1864): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+      x = (x + a / x) * 0.5;
+../Core/Src/spi.c(1878): error:  #159: declaration is incompatible with previous "GetRotateXY" (declared at line 1753)
+  TypeXY GetRotateXY(int x, int y)
+../Core/Src/spi.c: 18 warnings, 30 errors
+compiling tim.c...
+compiling usart.c...
+compiling stm32h7xx_it.c...
+compiling stm32h7xx_hal_msp.c...
+compiling stm32h7xx_hal_cortex.c...
+compiling stm32h7xx_hal_rcc.c...
+compiling stm32h7xx_hal_rcc_ex.c...
+compiling stm32h7xx_hal_flash.c...
+compiling stm32h7xx_hal_flash_ex.c...
+compiling stm32h7xx_hal_gpio.c...
+compiling stm32h7xx_hal_hsem.c...
+compiling stm32h7xx_hal_dma.c...
+compiling stm32h7xx_hal_dma_ex.c...
+compiling stm32h7xx_hal_mdma.c...
+compiling stm32h7xx_hal_pwr.c...
+compiling stm32h7xx_hal_pwr_ex.c...
+compiling stm32h7xx_hal.c...
+compiling stm32h7xx_hal_i2c.c...
+compiling stm32h7xx_hal_i2c_ex.c...
+compiling stm32h7xx_hal_exti.c...
+compiling stm32h7xx_hal_spi.c...
+compiling stm32h7xx_hal_spi_ex.c...
+compiling stm32h7xx_hal_tim.c...
+compiling stm32h7xx_hal_tim_ex.c...
+compiling stm32h7xx_hal_uart.c...
+compiling stm32h7xx_hal_uart_ex.c...
+compiling system_stm32h7xx.c...
+compiling show.c...
+../User/Inc/show.h(17): warning:  #1-D: last line of file ends without a newline
+  #endif 
+..\User\Src\show.c(6): warning:  #223-D: function "LCD_SetBackColor" declared implicitly
+        LCD_SetBackColor(LCD_BLACK);                    
+..\User\Src\show.c(7): warning:  #223-D: function "LCD_Clear" declared implicitly
+        LCD_Clear();                                                    
+..\User\Src\show.c(8): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LIGHT_GREEN);                                      
+..\User\Src\show.c(10): warning:  #223-D: function "LCD_SetAsciiFont" declared implicitly
+        LCD_SetAsciiFont(&ASCII_Font20);
+..\User\Src\show.c(11): warning:  #223-D: function "LCD_DisplayString" declared implicitly
+        LCD_DisplayString(20,10,"received_x_1:");
+..\User\Src\show.c(15): warning:  #223-D: function "LCD_DisplayNumber" declared implicitly
+        LCD_DisplayNumber(150,10,received_x_1,3);
+..\User\Src\show.c(36): warning:  #1-D: last line of file ends without a newline
+  }
+..\User\Src\show.c: 8 warnings, 0 errors
+compiling lcd_fonts.c...
+compiling lcd_image.c...
+compiling lcd_model.c...
+..\User\Src\lcd_model.c(36): warning:  #223-D: function "LCD_SetDirection" declared implicitly
+        LCD_SetDirection(Direction_V);          
+..\User\Src\lcd_model.c(37): warning:  #223-D: function "LCD_SetTextFont" declared implicitly
+        LCD_SetTextFont(&CH_Font24);                    // 设置2424中文字体,ASCII字体对应为2412
+..\User\Src\lcd_model.c(38): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LCD_BLACK);                                // 设置画笔颜色
+..\User\Src\lcd_model.c(44): warning:  #223-D: function "LCD_SetBackColor" declared implicitly
+                        case 0: LCD_SetBackColor(LIGHT_RED);            break;  
+..\User\Src\lcd_model.c(54): warning:  #223-D: function "LCD_Clear" declared implicitly
+                LCD_Clear();            // 清屏
+..\User\Src\lcd_model.c(55): warning:  #223-D: function "LCD_DisplayText" declared implicitly
+                LCD_DisplayText(13, 70,"STM32H7 刷屏测试");
+..\User\Src\lcd_model.c(71): warning:  #223-D: function "LCD_SetBackColor" declared implicitly
+        LCD_SetBackColor(LCD_BLACK);                    //      设置背景色
+..\User\Src\lcd_model.c(72): warning:  #223-D: function "LCD_Clear" declared implicitly
+        LCD_Clear();                                                                                    // 清屏
+..\User\Src\lcd_model.c(73): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LIGHT_GREEN);                              // 设置画笔颜色         
+..\User\Src\lcd_model.c(75): warning:  #223-D: function "LCD_SetAsciiFont" declared implicitly
+        LCD_SetAsciiFont(&ASCII_Font12);                
+..\User\Src\lcd_model.c(76): warning:  #223-D: function "LCD_DisplayString" declared implicitly
+        LCD_DisplayString(20,25,"Makerbase");
+..\User\Src\lcd_model.c(95): warning:  #223-D: function "LCD_SetTextFont" declared implicitly
+        LCD_SetTextFont(&CH_Font32);                    
+..\User\Src\lcd_model.c(96): warning:  #223-D: function "LCD_DisplayText" declared implicitly
+        LCD_DisplayText(20,180,"创客");
+..\User\Src\lcd_model.c(111): warning:  #223-D: function "LCD_Clear" declared implicitly
+        LCD_Clear();                                                                            // 清屏
+..\User\Src\lcd_model.c(112): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LIGHT_BLUE);                               // 设置画笔颜色
+..\User\Src\lcd_model.c(116): warning:  #223-D: function "LCD_DrawLine" declared implicitly
+                LCD_DrawLine(12,14,i*5,280);
+..\User\Src\lcd_model.c(123): warning:  #223-D: function "LCD_DrawLine" declared implicitly
+                LCD_DrawLine(228,14,240-i*5,280);
+..\User\Src\lcd_model.c(130): warning:  #223-D: function "LCD_DrawLine" declared implicitly
+                LCD_DrawLine(120,139,240-i*5,280);
+..\User\Src\lcd_model.c(147): warning:  #223-D: function "LCD_Clear" declared implicitly
+        LCD_Clear();                                                                                    // 清屏
+..\User\Src\lcd_model.c(148): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LIGHT_GREEN);                              // 设置画笔颜色
+..\User\Src\lcd_model.c(152): warning:  #223-D: function "LCD_DrawRect" declared implicitly
+                LCD_DrawRect(i*6,i*7,240-12*i,280-14*i);
+..\User\Src\lcd_model.c(159): warning:  #223-D: function "LCD_FillRect" declared implicitly
+                LCD_FillRect(i*6,i*7,240-12*i,280-14*i);
+..\User\Src\lcd_model.c(167): warning:  #223-D: function "LCD_DrawRect" declared implicitly
+                LCD_DrawRect(i*6,i*7,240-12*i,280-14*i);
+..\User\Src\lcd_model.c(180): warning:  #223-D: function "LCD_FillRect" declared implicitly
+                LCD_FillRect(i*6,i*7,240-12*i,280-14*i);
+..\User\Src\lcd_model.c(196): warning:  #223-D: function "LCD_Clear" declared implicitly
+        LCD_Clear();                                                                                    // 清屏
+..\User\Src\lcd_model.c(197): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LIGHT_GREEN);                              // 设置画笔颜色
+..\User\Src\lcd_model.c(201): warning:  #223-D: function "DrawRoundRect" declared implicitly
+                DrawRoundRect(i*6,i*7,240-12*i,280-14*i,12);
+..\User\Src\lcd_model.c(208): warning:  #223-D: function "DrawfillRoundRect" declared implicitly
+                DrawfillRoundRect(i*6,i*7,240-12*i,280-14*i,12);
+..\User\Src\lcd_model.c(222): warning:  #223-D: function "LCD_Clear" declared implicitly
+        LCD_Clear();                                                                                    // 清屏
+..\User\Src\lcd_model.c(223): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LIGHT_GREEN);                              // 设置画笔颜色
+..\User\Src\lcd_model.c(225): warning:  #223-D: function "LCD_DrawEllipse" declared implicitly
+        LCD_DrawEllipse(120,140,60,90);
+..\User\Src\lcd_model.c(227): warning:  #223-D: function "DrawFillEllipse" declared implicitly
+        DrawFillEllipse(120,140,60,90);
+..\User\Src\lcd_model.c(248): warning:  #223-D: function "LCD_Clear" declared implicitly
+        LCD_Clear();                                                                                    // 清屏
+..\User\Src\lcd_model.c(249): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LIGHT_GREEN);                              // 设置画笔颜色
+..\User\Src\lcd_model.c(251): warning:  #223-D: function "LCD_DrawCircle" declared implicitly
+        LCD_DrawCircle(120,140,100);
+..\User\Src\lcd_model.c(253): warning:  #223-D: function "LCD_FillCircle" declared implicitly
+        LCD_FillCircle(120,140,100);
+..\User\Src\lcd_model.c(266): warning:  #223-D: function "LCD_Clear" declared implicitly
+        LCD_Clear();                                                                                    // 清屏
+..\User\Src\lcd_model.c(267): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LIGHT_GREEN);                              // 设置画笔颜色
+..\User\Src\lcd_model.c(269): warning:  #223-D: function "DrawTriangle" declared implicitly
+        DrawTriangle(12,14,228,14,228,255);
+..\User\Src\lcd_model.c(271): warning:  #223-D: function "DrawFillTriangle" declared implicitly
+        DrawFillTriangle(12,14,228,14,228,255);
+..\User\Src\lcd_model.c(291): warning:  #223-D: function "LCD_Clear" declared implicitly
+        LCD_Clear();
+..\User\Src\lcd_model.c(292): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LIGHT_GREEN);                              // 设置画笔颜色
+..\User\Src\lcd_model.c(293): warning:  #223-D: function "LCD_DrawImage" declared implicitly
+        LCD_DrawImage( 0, 20, 239, 239, Image_2_239x239);
+..\User\Src\lcd_model.c(310): warning:  #223-D: function "LCD_Clear" declared implicitly
+        LCD_Clear();                                                                                    // 清屏
+..\User\Src\lcd_model.c(311): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LIGHT_GREEN);                              // 设置画笔颜色
+..\User\Src\lcd_model.c(317): warning:  #223-D: function "SetAngle" declared implicitly
+                SetAngle(i);
+..\User\Src\lcd_model.c(318): warning:  #223-D: function "SetRotateCenter" declared implicitly
+                SetRotateCenter(120,140);
+..\User\Src\lcd_model.c(319): warning:  #223-D: function "GetRotateXY" declared implicitly
+                temp=GetRotateXY(120,140+90);
+..\User\Src\lcd_model.c(319): error:  #513: a value of type "int" cannot be assigned to an entity of type "TypeXY"
+                temp=GetRotateXY(120,140+90);
+..\User\Src\lcd_model.c(320): warning:  #223-D: function "LCD_DrawPoint" declared implicitly
+                LCD_DrawPoint(temp.x,temp.y,LCD_GREEN);
+..\User\Src\lcd_model.c(323): warning:  #223-D: function "LCD_DrawCircle" declared implicitly
+        LCD_DrawCircle(120,140,90);
+..\User\Src\lcd_model.c(329): warning:  #223-D: function "LCD_FillCircle" declared implicitly
+                LCD_FillCircle(120,140,i);
+..\User\Src\lcd_model.c(338): warning:  #223-D: function "SetAngle" declared implicitly
+                SetAngle(i);
+..\User\Src\lcd_model.c(339): warning:  #223-D: function "SetRotateCenter" declared implicitly
+                SetRotateCenter(120,140);
+..\User\Src\lcd_model.c(340): warning:  #223-D: function "GetRotateXY" declared implicitly
+                temp=GetRotateXY(120,230);
+..\User\Src\lcd_model.c(340): error:  #513: a value of type "int" cannot be assigned to an entity of type "TypeXY"
+                temp=GetRotateXY(120,230);
+..\User\Src\lcd_model.c(342): warning:  #223-D: function "LCD_FillCircle" declared implicitly
+                LCD_FillCircle(temp.x,temp.y,10);
+..\User\Src\lcd_model.c(365): warning:  #223-D: function "LCD_Clear" declared implicitly
+        LCD_Clear();                                                                                    // 清屏
+..\User\Src\lcd_model.c(366): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LIGHT_GREEN);                              // 设置画笔颜色
+..\User\Src\lcd_model.c(380): warning:  #223-D: function "LCD_DrawLine" declared implicitly
+                                LCD_DrawLine(x[i],y[i],x[j],y[j]);
+..\User\Src\lcd_model.c(409): warning:  #223-D: function "LCD_Clear" declared implicitly
+        LCD_Clear();                                                                                    // 清屏
+..\User\Src\lcd_model.c(410): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LIGHT_GREEN);                              // 设置画笔颜色
+..\User\Src\lcd_model.c(412): warning:  #223-D: function "LCD_DrawCircle" declared implicitly
+        LCD_DrawCircle(120,140,90);
+..\User\Src\lcd_model.c(444): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LCD_BLACK);
+..\User\Src\lcd_model.c(448): warning:  #223-D: function "SetRotateValue" declared implicitly
+                SetRotateValue(120,140,(t-1)*6,1);
+..\User\Src\lcd_model.c(449): warning:  #223-D: function "GetRotateXY" declared implicitly
+                secpoint=GetRotateXY(120-l,140);
+..\User\Src\lcd_model.c(449): error:  #513: a value of type "int" cannot be assigned to an entity of type "TypeXY"
+                secpoint=GetRotateXY(120-l,140);
+..\User\Src\lcd_model.c(450): warning:  #223-D: function "LCD_DrawLine" declared implicitly
+                LCD_DrawLine(120,140,secpoint.x,secpoint.y);
+..\User\Src\lcd_model.c(454): warning:  #223-D: function "SetRotateValue" declared implicitly
+                SetRotateValue(120,140,0,1);
+..\User\Src\lcd_model.c(455): warning:  #223-D: function "GetRotateXY" declared implicitly
+                secpoint=GetRotateXY(120-l,140);
+..\User\Src\lcd_model.c(455): error:  #513: a value of type "int" cannot be assigned to an entity of type "TypeXY"
+                secpoint=GetRotateXY(120-l,140);
+..\User\Src\lcd_model.c(456): warning:  #223-D: function "LCD_DrawLine" declared implicitly
+                LCD_DrawLine(120,140,secpoint.x,secpoint.y);
+..\User\Src\lcd_model.c(458): error:  #513: a value of type "int" cannot be assigned to an entity of type "TypeXY"
+                secpoint=GetRotateXY(120-l,140);
+..\User\Src\lcd_model.c(461): warning:  #223-D: function "SetRotateValue" declared implicitly
+        SetRotateValue(120,140,t*6,1);
+..\User\Src\lcd_model.c(462): warning:  #223-D: function "GetRotateXY" declared implicitly
+        secpoint=GetRotateXY(120-l,140);
+..\User\Src\lcd_model.c(462): error:  #513: a value of type "int" cannot be assigned to an entity of type "TypeXY"
+        secpoint=GetRotateXY(120-l,140);
+..\User\Src\lcd_model.c(464): warning:  #223-D: function "LCD_DrawLine" declared implicitly
+        LCD_DrawLine(120,140,secpoint.x,secpoint.y);
+..\User\Src\lcd_model.c(474): warning:  #223-D: function "SetRotateValue" declared implicitly
+        SetRotateValue(120,140,t*6,1);
+..\User\Src\lcd_model.c(475): warning:  #223-D: function "GetRotateXY" declared implicitly
+        secpoint=GetRotateXY(120-l,140);
+..\User\Src\lcd_model.c(475): error:  #513: a value of type "int" cannot be assigned to an entity of type "TypeXY"
+        secpoint=GetRotateXY(120-l,140);
+..\User\Src\lcd_model.c(476): warning:  #223-D: function "LCD_SetColor" declared implicitly
+        LCD_SetColor(LCD_GREEN);
+..\User\Src\lcd_model.c(477): warning:  #223-D: function "LCD_DrawLine" declared implicitly
+        LCD_DrawLine(120,140,secpoint.x,secpoint.y);
+..\User\Src\lcd_model.c(487): error:  #513: a value of type "int" cannot be assigned to an entity of type "TypeXY"
+                tmp1=GetRotateXY(120-90,140);
+..\User\Src\lcd_model.c(488): error:  #513: a value of type "int" cannot be assigned to an entity of type "TypeXY"
+                tmp2=GetRotateXY(120-80,140);
+..\User\Src\lcd_model.c: 75 warnings, 9 errors
+compiling hardware.c...
+../User/Inc/hardware.h(9): warning:  #1295-D: Deprecated declaration LED_ON - give arg types
+  void LED_ON();
+../User/Inc/hardware.h(10): warning:  #1295-D: Deprecated declaration LED_OFF - give arg types
+  void LED_OFF();
+../User/Inc/hardware.h(11): warning:  #1295-D: Deprecated declaration LED_TOGGLE - give arg types
+  void LED_TOGGLE();
+../User/Inc/hardware.h(13): warning:  #1295-D: Deprecated declaration BUZZER_ON - give arg types
+  void BUZZER_ON();
+../User/Inc/hardware.h(14): warning:  #1295-D: Deprecated declaration BUZZER_OFF - give arg types
+  void BUZZER_OFF();
+../User/Inc/hardware.h(15): warning:  #1295-D: Deprecated declaration LASER_ON - give arg types
+  void LASER_ON();
+../User/Inc/hardware.h(16): warning:  #1295-D: Deprecated declaration LASER_OFF - give arg types
+  void LASER_OFF();
+../User/Inc/hardware.h(19): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\User\Src\hardware.c(76): warning:  #1-D: last line of file ends without a newline
+  }
+..\User\Src\hardware.c: 9 warnings, 0 errors
+compiling PID.c...
+..\User\Src\PID.c(37): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+    return (uint16_t)(500 + (angle / 180.0) * 2000); 
+..\User\Src\PID.c: 1 warning, 0 errors
+compiling servo.c...
+../User/Inc/usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+../User/Inc/usart.h(5): warning:  #1295-D: Deprecated declaration USART_Init - give arg types
+  void USART_Init();
+../User/Inc/usart.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif
+../User/Inc/servo.h(12): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\User\Src\servo.c: 4 warnings, 0 errors
+compiling control.c...
+../User/Inc/control.h(6): warning:  #1295-D: Deprecated declaration TIM_Init - give arg types
+  void TIM_Init();
+../User/Inc/control.h(15): warning:  #1295-D: Deprecated declaration Stop - give arg types
+  void Stop();
+../User/Inc/control.h(22): warning:  #1-D: last line of file ends without a newline
+  #endif
+..\User\Src\control.c(132): warning:  #1-D: last line of file ends without a newline
+  }
+..\User\Src\control.c: 4 warnings, 0 errors
+compiling Usart.c...
+..\User\Src\Usart.c(7): error:  #20: identifier "rx_buffer" is undefined
+        HAL_UART_Receive_DMA(&huart2,rx_buffer,RX_BUFFER_SIZE);
+..\User\Src\Usart.c(7): error:  #20: identifier "RX_BUFFER_SIZE" is undefined
+        HAL_UART_Receive_DMA(&huart2,rx_buffer,RX_BUFFER_SIZE);
+..\User\Src\Usart.c(8): error:  #20: identifier "rx_buffer_uart2" is undefined
+        HAL_UART_Receive_IT(&huart2, rx_buffer_uart2,1);
+..\User\Src\Usart.c(23): warning:  #1-D: last line of file ends without a newline
+  }
+..\User\Src\Usart.c: 1 warning, 3 errors
+"5-17\5-17.axf" - 42 Error(s), 137 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.4.2.0.pack
+                ARM::CMSIS:CORE:3.40.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 3.40.0
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\33586\Desktop\5-17\5-17\MDK-ARM\RTE
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\4.2.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32H7xx_DFP\2.7.0
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:3.40.0
+      Source file:   CMSIS\UserCodeTemplates\ARM\ITM_Retarget.c
+Target not created.
+</pre>
+</body>
+</html>
