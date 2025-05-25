@@ -137,8 +137,8 @@ int main(void)
   SPI_LCD_Init();	
   TIM_Init();
   USART_Init();
-   //test();
-  // example();
+   test();
+  example();
   
   
   
